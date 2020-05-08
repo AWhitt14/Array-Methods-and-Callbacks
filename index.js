@@ -80,20 +80,26 @@ Hint: use `.reduce` */
 
 function getCountryWins(data, team) {
 
-ldata.reduce()
 
 };
 
-getCountryWins();
+//getCountryWins();
 
 /* Task 8: Write a function called `getAverageGoals` that accepts a parameter `data` and returns the the average number of home team goals and away team goals scored per match (Hint: use .reduce and do this in 2 steps) */
 
 function getAverageGoals(data) {
-let avg = data.reduce()  
-
+let avghome = data.reduce((goals,game,index)=>{
+    let gc = index + 1;
+    return goals + game["Home Team Goals"]/gc;
+},0)  
+let avgAway = data.reduce((goals,game,index)=>{
+    let gc = index + 1;
+    return goals + game["Away Team Goals"]/gc;
+},0)  
+return `Home Goals Average: ${avghome}, Away Goals Average: ${avgAway}`;
 };
 
-getAverageGoals();
+console.log(getAverageGoals(fifaData));
 
 
 /// STRETCH 🥅 //
