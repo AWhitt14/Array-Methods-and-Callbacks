@@ -79,6 +79,9 @@ Hint: Investigate your data to find "team initials"!
 Hint: use `.reduce` */
 
 function getCountryWins(data, team) {
+    let avghome = data.reduce((goals,game,index)=>{
+
+    });
 
 
 };
